@@ -13,7 +13,7 @@ namespace ComicBlizz
         private const string _readcomicsImageBaseUrl = "http://www.readcomics.tv/images/manga/{0}/{1}/{2}.jpg";
         private const string _readcomicsPageBaseUrl = "http://www.readcomics.tv/{0}/chapter-{1}";
 
-        public async Task<List<Image>> LoadPages(string name, int issue)
+        public async Task<List<Task<Image>>> LoadPages(string name, int issue)
         {
             int pagesCount = 0;
 
@@ -41,12 +41,12 @@ namespace ComicBlizz
                 }
             }
             if (pagesCount == 0) return null;
-            List<Image> images = new List<Image>(pagesCount);
+            List<Task<Image>> images = new List<Task<Image>>(pagesCount);
 
             for (int i = 0; i < pagesCount; i++)
             {
                 var imgUrl = string.Format(_readcomicsImageBaseUrl, name, issue, i);
-                images.Add(await WebUtils.LoadImage(new Uri(imgUrl)));
+                images.Add(WebUtils.LoadImage(new Uri(imgUrl)));
             }
 
             return images;

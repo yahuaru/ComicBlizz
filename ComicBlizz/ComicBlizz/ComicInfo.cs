@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace ComicBlizz
 {
+    [Serializable]
     class ComicInfo
     {
-        public ComicInfo(string name, string description, int chapters)
+        public ComicInfo()
         {
-            _name = name;
-            _description = description;
-            _chapters = chapters;
+            
         }
 
-        private string _name;
-        private string _description;
-        private int _chapters;
+        public ComicInfo(Image cover, string name, string description, int chapters)
+        {
+            Cover = cover;
+            Name = name;
+            Description = description;
+            Chapters = chapters;
+        }
+
+        public Image Cover;
+        public string Name;
+        public string Description;
+        public int Chapters;
     }
 }

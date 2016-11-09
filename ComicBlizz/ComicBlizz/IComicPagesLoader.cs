@@ -8,6 +8,6 @@ namespace ComicBlizz
 {
     interface IComicPagesLoader
     {
-        Task<List<Image>> LoadPages(string name, int issue);
+        Task<List<Task<Image>>> LoadPages(string name, int issue);
     }
 }

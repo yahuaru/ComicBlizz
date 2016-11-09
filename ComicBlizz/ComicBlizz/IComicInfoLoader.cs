@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ComicBlizz
 {
     interface IComicInfoLoader
     {
-        ComicInfo LoadComicInfo(string url);
+        Task<Task<ComicInfo>> LoadComicInfo(string url);
     }
 
 }
