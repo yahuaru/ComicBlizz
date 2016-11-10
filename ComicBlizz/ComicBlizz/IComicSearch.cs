@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace ComicBlizz
 {
-    interface IComicInfoLoader
+    interface IComicSearch
     {
-        Task<ComicInfo> LoadComicInfo(string url);
+        Task<List<string>> SearchComic(string name);
     }
-
 }

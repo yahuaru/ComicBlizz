@@ -11,7 +11,7 @@ namespace ComicBlizz
     {
         private const string baseUrl = "http://www.readcomics.tv/comic/";
 
-        public async Task<Task<ComicInfo>> LoadComicInfo(string name)
+        public async Task<ComicInfo> LoadComicInfo(string name)
         {
             var comicInfo = new ComicInfo();
             var url = baseUrl + name;
@@ -45,7 +45,7 @@ namespace ComicBlizz
                 }
             }
 
-            return null;
+            return comicInfo;
         }
     }
 }

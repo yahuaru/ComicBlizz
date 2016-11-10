@@ -15,11 +15,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)ComicInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IComicInfoLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IComicPagesLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IComicSearch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ReadcomicsComicInfoLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ReadcomicsComicPagesLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReadcomicsSearch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WebUtils.cs" />
   </ItemGroup>
   <ItemGroup>
